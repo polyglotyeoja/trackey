@@ -5,11 +5,19 @@ import javax.persistence.Id;
 
 @Entity
 public class Employee {
+
 	@Id
 	private String employeeId;
 	private String email;
 	private String name;
 	private Role role;
+
+	public Employee(String employeeId, String email, String name, Role role) {
+		this.employeeId = employeeId;
+		this.email = email;
+		this.name = name;
+		this.role = role;
+	}
 	
 	public String getName() {
 		return name;
@@ -45,8 +53,6 @@ public class Employee {
 
 	private enum Role{
 		MANAGER, SALESPERSON, DBADMIN
-	};
-	
-	
+	}
 
 }

@@ -10,6 +10,17 @@ public class Car {
 	private String color;
 	private String make;
 	private String model;
+
+	public Car(String vin, String color, String make, String model, String stockNo, boolean softDelete, String year) {
+		this.vin = vin;
+		this.color = color;
+		this.make = make;
+		this.model = model;
+		this.stockNo = stockNo;
+		this.softDelete = softDelete;
+		this.year = year;
+	}
+
 	private String stockNo;
 	private boolean softDelete;
 	private String year;
